@@ -1,0 +1,79 @@
+section {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+article {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  width: 64px;
+  height: 500px;
+  border-radius: 36px;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+article h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(255 255 255 / 96%);
+}
+
+article p {
+  color: rgb(255 255 255 / 66%);
+}
+
+article.active {
+  width: 400px;
+  opacity: 1;
+}
+
+article .material-symbols-outlined {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background: rgb(255 255 255 / 80%);
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+article .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  padding: 100px 0 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%));
+  transition: 0.25s;
+}
+
+article.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+article img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 150%;
+  filter: grayscale(0.5);
+}
